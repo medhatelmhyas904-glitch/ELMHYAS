@@ -4,7 +4,7 @@ import path from "path"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/ELMHYAS/",
+  base: "/ELMHYAS/",  // <--- تم إضافة / هنا
   plugins: [react()],
   resolve: {
     alias: {
