@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Educational RTL Design System - All colors, gradients, fonts, and animations defined here */
+
+@layer base {
+  :root {
+    /* Educational Color Palette */
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+    
+    /* Educational Deep Blue Theme */
+    --primary: 217 91% 60%;
+    --primary-glow: 217 91% 70%;
+    --primary-dark: 217 91% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Warm Orange Accent */
+    --secondary: 24 95% 53%;
+    --secondary-glow: 24 95% 63%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Fresh Green Success */
+    --success: 142 76% 36%;
+    --success-glow: 142 76% 46%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Card and Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --card-soft: 210 40% 98%;
+    
+    /* Muted and Subtle Colors */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    /* Accent Colors */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Popover Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    /* Interactive Elements */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders and Inputs */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 91% 60%;
+    
+    /* Educational Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(24 95% 53%), hsl(24 95% 63%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(24 95% 53%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    
+    /* Educational Shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
+    --shadow-secondary: 0 10px 30px -10px hsl(24 95% 53% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(217 91% 60% / 0.1);
+    --shadow-elegant: 0 10px 40px -10px hsl(217 91% 60% / 0.25);
+    
+    /* Animation Timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Educational Colors */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    
+    --primary: 217 91% 70%;
+    --primary-glow: 217 91% 80%;
+    --primary-dark: 217 91% 55%;
+    --primary-foreground: 222.2 84% 4.9%;
+    
+    --secondary: 24 95% 63%;
+    --secondary-glow: 24 95% 73%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    
+    --success: 142 76% 46%;
+    --success-glow: 142 76% 56%;
+    --success-foreground: 222.2 84% 4.9%;
+    
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --card-soft: 217.2 32.6% 17.5%;
+    
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 217 91% 70%;
+    --accent-foreground: 222.2 84% 4.9%;
+    
+    /* Popover Colors */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 217 91% 70%;
+    
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 70%), hsl(217 91% 80%));
+    --gradient-secondary: linear-gradient(135deg, hsl(24 95% 63%), hsl(24 95% 73%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 46%), hsl(142 76% 56%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 70%) 0%, hsl(24 95% 63%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222.2 84% 4.9%) 0%, hsl(217.2 32.6% 17.5%) 100%);
+    
+    /* Dark Mode Shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(217 91% 70% / 0.4);
+    --shadow-secondary: 0 10px 30px -10px hsl(24 95% 63% / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(217 91% 70% / 0.2);
+    --shadow-elegant: 0 10px 40px -10px hsl(217 91% 70% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    direction: rtl;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    direction: rtl;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+}
+
+/* Educational Utility Classes */
+@layer utilities {
+  /* Gradients */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  /* Educational Shadows */
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .shadow-secondary {
+    box-shadow: var(--shadow-secondary);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  /* Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Interactive Effects */
+  .hover-lift {
+    @apply transition-smooth hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-smooth;
+  }
+  
+  .hover-glow:hover {
+    filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.5));
+  }
+  
+  /* Educational Cards */
+  .educational-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-card hover-lift transition-smooth;
+  }
+  
+  .educational-card-gradient {
+    @apply gradient-card border border-border rounded-xl p-6 shadow-card hover-lift transition-smooth;
+  }
+  
+  /* Educational Buttons */
+  .educational-button {
+    @apply gradient-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover-glow transition-smooth;
+  }
+  
+  .educational-button-secondary {
+    @apply gradient-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover-glow transition-smooth;
+  }
+  
+  /* Statistics Cards */
+  .stat-card {
+    @apply educational-card-gradient text-center;
+  }
+  
+  /* RTL Specific */
+  .rtl-flip {
+    transform: scaleX(-1);
+  }
+}
+
+/* Educational Animations */
+@layer utilities {
+  /* Fade In Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Slide Up Animation */
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Bounce In Animation */
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+    70% {
+      opacity: 0.9;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Scale In Animation */
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out forwards;
+  }
+  
+  /* Staggered Animations */
+  .animate-fade-in-1 {
+    animation: fade-in 0.6s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-2 {
+    animation: fade-in 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-3 {
+    animation: fade-in 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-4 {
+    animation: fade-in 0.6s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+}
