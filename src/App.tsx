@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import LoginPortal from './components/Auth/LoginPortal';
 import StudentSignup from './components/Auth/StudentSignup';
 import TeacherSignup from './components/Auth/TeacherSignup';
-import { UserRole } from './lib/types'; 
+import { UserRole } from './lib/types';
 
 // إنشاء component جديد لتضمين منطق التطبيق
 const AppContent = () => {
@@ -41,7 +41,8 @@ const AppContent = () => {
 // الدالة App الرئيسية التي تحتوي على Router
 function App() {
   return (
-    <Router>
+    //  👇 التعديل الوحيد والمهم هنا 
+    <Router basename="/ELMHYAS">
       <AppContent />
     </Router>
   );
